@@ -1,4 +1,4 @@
-# Python
+# 猜1-10
 import random
 ans=random.randint(1,10.0)
 guess=int(input())
