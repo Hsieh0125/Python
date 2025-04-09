@@ -1,0 +1,36 @@
+#2025 1月 第一題
+a,b=map(int, input().split())
+n=int(input())
+t=list(map(int, input().split()))
+cycle=a+b
+wait=0
+
+
+for i in t:
+    pos = i % cycle
+    if pos >= a:
+        wait += (cycle - pos)
+print(wait)
+
+
+
+
+#2016 10月 第一題
+tri=list(map(int, input().split()))
+tri.sort() 
+a=tri[0]
+b=tri[1]
+c=tri[2]
+
+print(a,b,c)
+
+if a+b<=c:
+    print("No")
+elif a*a+b*b < c*c:
+    print("Obtuse")
+elif a*a+b*b == c*c:
+    print("Right")
+elif a*a+b*b > c*c:
+    print("Acute")
+
+
