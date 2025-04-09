@@ -13,8 +13,7 @@ for i in t:
 print(wait)
 
 
-
-
+-----------------------------------------------------
 #2016 10月 第一題
 tri=list(map(int, input().split()))
 tri.sort() 
@@ -34,6 +33,7 @@ elif a*a+b*b > c*c:
     print("Acute")
 
 
+-----------------------------------------------------
 #2019 6月 第一題
 h1=list(map(int, input().split()))
 c1=list(map(int, input().split()))
