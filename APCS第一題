@@ -1,4 +1,4 @@
-#2025 1月 第一題
+#1. 等紅綠燈
 a,b=map(int, input().split())
 n=int(input())
 t=list(map(int, input().split()))
@@ -14,7 +14,7 @@ print(wait)
 
 
 -----------------------------------------------------
-#2016 10月 第一題
+#APCS-2016-1029-1三角形辨別
 tri=list(map(int, input().split()))
 tri.sort() 
 a=tri[0]
@@ -34,7 +34,7 @@ elif a*a+b*b > c*c:
 
 
 -----------------------------------------------------
-#2019 6月 第一題
+#籃球比賽
 h1=list(map(int, input().split()))
 c1=list(map(int, input().split()))
 h2=list(map(int, input().split()))
@@ -55,3 +55,19 @@ elif h1total < c1total and h2total < c2total:
     print("Lose")
 else:
     print("Tie")
+-----------------------------------------------------
+#APCS 2017-0304-1秘密差
+a=input().strip()
+
+A=0
+B=0
+
+for i, digit in enumerate(a):
+    n=int(digit)
+    if (i+1) % 2 ==1:
+        A += n
+    else:
+        B += n
+Ans = abs(A-B)
+
+print(Ans)
