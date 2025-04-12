@@ -71,3 +71,26 @@ for i, digit in enumerate(a):
 Ans = abs(A-B)
 
 print(Ans)
+-----------------------------------------------------
+#1. 機械鼠
+x,n=map(int, input().split())
+n1=list(map(int, input().split()))
+
+left=0
+right=0
+
+for i in n1:
+  if i>x:
+    right += 1
+  elif i<x:
+    left += 1
+  
+if right > left:
+  m=max(n1)
+  print(right,m)
+elif left > right:
+  n=min(n1)
+  print(left,n)
+else:
+  m=max(n1)
+  print(right,m)
