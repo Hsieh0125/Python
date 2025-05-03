@@ -1,26 +1,22 @@
 a=int(input())
-grade=list(map(int, input().split()))    
-
-grade.sort()
-
-pass_list=[]
-fail_list=[]
-
-for i in grade:
-    if i >= 60:
-        pass_list.append(i)
+b=list(map(int, input().split()))
+b.sort()
+passl=[]
+nopassl=[]
+for i in b: 
+    if i>=60:
+        passl.append(i)
     elif i<60:
-        fail_list.append(i)
+        nopassl.append(i)
 
-print(' '.join(map(str, grade)))
+print(' '.join(map(str, b)))
 
-
-if max(grade)<60:
-        print(max(grade))
-        print("worst case")
-elif min(grade)>=60:
-        print("best case")
-        print(min(pass_list))
+if len(passl)==0:
+    print(max(nopassl))
+    print("worst case")
+elif len(nopassl)==0:
+    print("best case")
+    print(min(passl))
 else:
-      print(max(fail_list))
-      print(min(pass_list))
+    print(max(nopassl))
+    print(min(passl))
