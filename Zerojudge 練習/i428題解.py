@@ -12,3 +12,17 @@ for i in range(1, len(stop)):
 m=max(dt)
 n=min(dt)
 print(m,n)
+-----------------------------------
+#第二種解法(2個一維陣列，分別處理x和y座標)
+a=int(input())
+x=[]
+y=[]
+d=[]
+for i in range(a):
+    sx,sy=map(int,input().split())
+    x.append(sx)
+    y.append(sy)
+for j in range(1,a):
+    n=abs(x[j-1]-x[j])+abs(y[j-1]-y[j])
+    d.append(n)
+print(max(d),min(d))
