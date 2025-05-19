@@ -1,14 +1,13 @@
 a=int(input())
-n=list(map(int, input().split()))
-
-count = 0
-
+b=list(map(int,input().split()))
+count=0
 for i in range(a):
-    if n[i]==0:
-        if i == 0:
-            count += n[i+1]
-        elif i == a-1:
-            count += n[i-1]
+    if b[i]==0:
+        if i==0:
+            count+=b[i+1]
+        elif i==a-1:
+            count+=b[i-1]
         else:
-            count += min(n[i+1], n[i-1])
+            pl=min(b[i-1],b[i+1])
+            count+=pl
 print(count)
