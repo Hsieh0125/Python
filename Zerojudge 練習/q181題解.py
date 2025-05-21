@@ -1,12 +1,9 @@
-a,b=map(int, input().split())
-n=int(input())
-t=list(map(int, input().split()))
-cycle=a+b
+a,b=map(int,input().split())
+c=int(input())
 wait=0
-
-
-for i in t:
-    pos = i % cycle
-    if pos >= a:
-        wait += (cycle - pos)
+c=list(map(int,input().split()))
+for i in c:
+    n=i%(a+b)
+    if n>=a:
+        wait+=(a+b)-n
 print(wait)
