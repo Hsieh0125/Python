@@ -1,15 +1,9 @@
-a,b=map(int, input().split())
-item=0
-pr=[]
-
-
-for i in range(a):
-    c=list(map(int, input().split()))
-    dif=max(c)-min(c)
-    if b<=dif:
-        avr=sum(c)//3
-        pr.append(avr)
-        item+=1
-    
-ans=sum(pr)
-print(item,ans)
+n,d=map(int,input().split())
+buy=0
+spend=0
+for i in range(n):
+    a=list(map(int,input().split()))
+    if max(a)-min(a)>=d:
+        buy+=1
+        spend+=sum(a)//3
+print(buy,spend)   
