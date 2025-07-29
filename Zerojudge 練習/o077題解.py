@@ -1,11 +1,5 @@
 h,w,n=map(int,input().split())
-paper=[]
-for i in range(h):
-    a=[]
-    for j in range(w):
-        s=0
-        a.append(s)
-    paper.append(a)
+paper=[[0 for i in range(w)]for i in range(h)]
 
 for i in range(n):
     r,c,t,x=map(int,input().split())
